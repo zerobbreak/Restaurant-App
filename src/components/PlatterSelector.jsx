@@ -11,7 +11,7 @@ const HeroSection = () => {
       <div className="w-1/3 hidden lg:flex justify-center p-10 items-center">
         <div className="relative">
           <img
-            src="/assets/pexels-jonathanborba-2983101.jpg"
+            src="/assets/chicken_feet.jpg"
             alt="Meal 1"
             className="w-full h-auto object-cover rounded-md shadow-lg"
           />
@@ -44,7 +44,7 @@ const HeroSection = () => {
       <div className="w-1/3 hidden lg:flex justify-center p-10 items-center">
         <div className="relative">
           <img
-            src="/assets/pexels-minan1398-1482803.jpg"
+            src="/assets/meat-dish.jpg"
             alt="Meal 2"
             className="w-full h-auto object-cover rounded-md shadow-lg"
           />

@@ -11,6 +11,7 @@ import { GiChickenLeg, GiSteak } from "react-icons/gi";
 import Navbar from "../../components/Navbar";
 import styles from "../../style";
 import { useState, useEffect } from "react";
+import Card from "../../components/Card";
 
 const MenuPage = () => {
   const iconMap = {
@@ -131,31 +132,11 @@ const MenuPage = () => {
               </h2>
               <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-6">
                 {section.items.slice(0, itemsToShow).map((item, idx) => (
-                  <div
+                  <Card
                     key={idx}
-                    className="border border-gray-300 p-4 rounded-lg shadow-lg bg-primary flex flex-col items-center text-center"
-                  >
-                    <div className="flex items-center space-x-2 mb-4">
-                      {iconMap[section.category]}
-                      <h3 className="text-xl font-semibold text-white">
-                        {item.name}
-                      </h3>
-                    </div>
-                    {item.single !== undefined && item.meal !== undefined ? (
-                      <>
-                        <p className="text-white mt-2 mb-2">
-                          <span className="font-semibold">Single:</span> R{item.single}
-                        </p>
-                        <p className="text-white font-bold text-lg">
-                          <span className="font-semibold">Meal:</span> R{item.meal}
-                        </p>
-                      </>
-                    ) : (
-                      <p className="text-white font-bold text-lg">
-                        <span className="font-semibold">Price:</span> R{item.price}
-                      </p>
-                    )}
-                  </div>
+                    imageUrl={section.image}
+                    item={item}
+                  />
                 ))}
               </div>
             </div>

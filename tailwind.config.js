@@ -10,6 +10,7 @@ export default {
         primary: "#1c1c36",
       },
       backgroundImage: {
+        'hero-img': "url('/assets/hero-img.jpg')",
         'bg-image_1': "url('/assets/pexels-igor-starkov-233202-1307698.jpg')",
         'bg-image_2': "url('/assets/pexels-pixabay-260922.jpg')",
         'bg-mobile-image_1': "url('/assets/pexels-valeriya-827528.jpg')",

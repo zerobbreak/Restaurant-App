@@ -16,7 +16,7 @@ const BluehillsHome = () => {
 
       <HeroSection 
         title="Bluehills"
-        image="/assets/meal.jpg"
+        // image="/assets/meal.jpg"
       />
 
       <PlatterSection />

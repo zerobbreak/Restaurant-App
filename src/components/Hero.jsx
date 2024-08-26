@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 
-const HeroSection = ({ title, image }) => {
+const HeroSection = ({ title }) => {
   return (
-    <div className="flex items-center h-screen bg-white px-8">
+    <div className="flex justify-center bg-hero-img bg-no-repeat bg-center bg-cover items-center h-screen bg-white px-8">
       {/* Left Side: Text */}
       <div className="w-full md:w-1/2 p-5">
-        <h1 className="text-4xl font-bold text-gray-900">Welcome to {title}</h1>
-        <p className="mt-4 mb-10 text-lg text-gray-600">
+        <h1 className="text-4xl font-bold text-white">Welcome to {title}</h1>
+        <p className="mt-4 mb-10 text-lg text-white">
           Our dedicated team is committed to providing exceptional service that
           caters to your specific needs and preferences. We will work closely
           with you to create a menu and experience that exceeds your
@@ -21,14 +21,14 @@ const HeroSection = ({ title, image }) => {
         </Link>
       </div>
 
-      {/* Right Side: Image */}
+      {/* Right Side: Image
       <div className="hidden md:block w-full md:w-1/2">
         <img
           src={image}
           alt={`${title} Image`}
           className="w-full h-auto object-cover rounded-lg shadow-lg"
         />
-      </div>
+      </div> */}
     </div>
   );
 };

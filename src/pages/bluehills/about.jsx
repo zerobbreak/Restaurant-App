@@ -36,6 +36,8 @@ const BluehillsAbout = () => {
               authentic South African dining experience that blends heritage
               with modern trends.
             </p>
+
+            <img src="/assets/hatman.jpg" alt="Stock Image" />
           </div>
           <div className="mb-16">
             <h2 className="text-3xl font-semibold mb-6">Meet the Visionary</h2>
@@ -52,6 +54,7 @@ const BluehillsAbout = () => {
               Orlando West, Dumile ensures that the restaurant remains true to
               its founding principles.
             </p>
+            <img src="/assets/visionary.jpg" alt="Owner" />
           </div>
           <div className="mb-16">
             <h2 className="text-3xl font-semibold mb-6">Our Location</h2>
@@ -61,6 +64,7 @@ const BluehillsAbout = () => {
               families who appreciate delicious, healthy foods and beverages in
               a welcoming atmosphere.
             </p>
+            <img src="/assets/location.jpg" alt="" />
           </div>
           <div className="mb-16">
             <h2 className="text-3xl font-semibold mb-6">
@@ -106,6 +110,8 @@ const BluehillsAbout = () => {
                 hot beverages, beers, champagnes, spirits, cocktails.
               </li>
             </ul>
+
+            <img src="/assets/ourmenu.jpg" alt="" />
           </div>
           <div className="mb-16">
             <h2 className="text-3xl font-semibold mb-6">Our Vision</h2>
