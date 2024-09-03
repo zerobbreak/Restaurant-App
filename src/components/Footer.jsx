@@ -73,6 +73,11 @@ const Footer = () => {
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link to="/blue-hills/gallery" className="text-white hover:text-blue-500">
+                  Gallery
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -83,7 +88,7 @@ const Footer = () => {
               <a href="https://www.facebook.com/justbadela/" className="text-white hover:text-blue-500">
                 <FaFacebook size={24} />
               </a>
-              <a href="https://www.instagram.com/justbadela_food_and_wine/" className="text-white hover:text-blue-500">
+              <a href="https://www.instagram.com/justbadela_midrand" className="text-white hover:text-blue-500">
                 <FaInstagram size={24} />
               </a>             
             </div>

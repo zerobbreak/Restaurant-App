@@ -1,13 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 const Navbar = () => {
-  const [toggle, setToggle] = useState(false);
-  // const location = useLocation();
-  // const basePath = location.pathname.includes("blue-hills")
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navLinks = [
     {
-      id:"/blue-hills",
+      id: "/blue-hills",
       title: "Home",
     },
     {
@@ -29,51 +27,55 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="w-full flex py-6 justify-between items-center">
-      <Link to="/">
-        <img src="/assets/logo.svg" alt="hoobank" className="w-24 h-24" />
+    <nav className="text-white p-4">
+    <div className="container mx-auto flex justify-between items-center">
+      <Link to="/" className="text-xl font-bold">
+        <img src="/assets/logo.svg" alt="logo" className="w-24 h-24" />
       </Link>
 
-      <ul className="list-none sm:flex hidden justify-end items-center flex-1">
-        {navLinks.map((nav, index) => (
-          <li
-            key={nav.id}
-            className={`font-normal cursor-pointer text-[16px] ${
-              index === navLinks.length - 1 ? "mr-0" : "mr-10"
-            } text-white`}
-          >
-            <Link to={`${nav.id}`}>{nav.title}</Link>
+      {/* Desktop Links */}
+      <ul className="hidden sm:flex space-x-6">
+        {navLinks.map((link) => (
+          <li key={link.id}>
+            <Link to={link.id} className="hover:text-gray-400">
+              {link.title}
+            </Link>
           </li>
         ))}
       </ul>
 
-      <div className="sm:hidden flex flex-1 justify-end items-center">
+      {/* Mobile Menu Button */}
+      <button
+        className="sm:hidden block"
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+      >
         <img
-          src={toggle ? "/assets/close.svg" : "/assets/menu.svg"}
+          src={isMobileMenuOpen ? "/assets/close.svg" : "/assets/menu.svg"}
           alt="menu"
-          className="w-[28px] h-[28px] object-contain"
-          onClick={() => setToggle((prev) => !prev)}
+          className="w-6 h-6"
         />
-        <div
-          className={`${
-            toggle ? "flex" : "hidden"
-          } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
-        >
-          <ul className="list-none flex flex-col justify-end items-center flex-1">
-            {navLinks.map((nav, index) => (
-              <li
-                key={nav.id}
-                className={`font-normal cursor-pointer text-[16px] ${
-                  index === navLinks.length - 1 ? "mr-0" : "mb-4"
-                } text-white`}
+      </button>
+    </div>
+
+    {/* Mobile Menu */}
+    {isMobileMenuOpen && (
+      <div className="sm:hidden bg-gray-700 p-4 rounded-lg mt-2">
+        <ul className="flex flex-col space-y-4">
+          {navLinks.map((link) => (
+            <li key={link.id}>
+              <Link
+                to={link.id}
+                className="hover:text-gray-400"
+                onClick={() => setIsMobileMenuOpen(false)}
               >
-                <a href={`#${nav.id}`}>{nav.title}</a>
-              </li>
-            ))}
-          </ul>
-        </div>
+                {link.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
-    </nav>
+    )}
+  </nav>
   );
 };
 
