@@ -2,16 +2,16 @@ import { Link } from "react-router-dom";
 
 const HeroSection = ({ title }) => {
   return (
-    <div className="flex justify-center bg-hero-img bg-no-repeat bg-center bg-cover items-center h-screen bg-white px-8">
-      {/* Left Side: Text */}
-      <div className="w-full md:w-1/2 p-5">
-        <h1 className="text-4xl font-bold text-white">Welcome to {title}</h1>
-        <p className="mt-4 mb-10 text-lg text-white">
+    <div className="relative bg-hero-img bg-no-repeat bg-center bg-cover h-screen px-8">
+      {/* Content container centered at the bottom */}
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full text-center p-5">
+        <h1 className="text-4xl font-bold text-white">Welcome to 𝒥𝓊𝓈𝓉 𝐵𝒶𝒹𝑒𝓁𝒶</h1>
+        <p className="mt-4 mb-10 text-lg text-white text-center">
           Our dedicated team is committed to providing exceptional service that
           caters to your specific needs and preferences. We will work closely
           with you to create a menu and experience that exceeds your
-          expectations. Whether it is for a book launch, golf day or
-          conferencing. we are able to cater to your bespoke needs.
+          expectations. Whether it is for a book launch, golf day, or
+          conferencing, we are able to cater to your bespoke needs.
         </p>
         <Link
           to="/blue-hills/menu"
@@ -20,15 +20,6 @@ const HeroSection = ({ title }) => {
           Explore Menu
         </Link>
       </div>
-
-      {/* Right Side: Image
-      <div className="hidden md:block w-full md:w-1/2">
-        <img
-          src={image}
-          alt={`${title} Image`}
-          className="w-full h-auto object-cover rounded-lg shadow-lg"
-        />
-      </div> */}
     </div>
   );
 };

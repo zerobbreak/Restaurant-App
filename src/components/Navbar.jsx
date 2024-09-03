@@ -1,30 +1,30 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
-  const location = useLocation();
-  const basePath = location.pathname.includes("blue-hills")
-    ? "/blue-hills"
-    : location.pathname.includes("soweto")
-    ? "/soweto"
-    : "/";
+  // const location = useLocation();
+  // const basePath = location.pathname.includes("blue-hills")
 
   const navLinks = [
     {
-      id: basePath,
+      id:"/blue-hills",
       title: "Home",
     },
     {
-      id: `${basePath}/menu`,
+      id: "/blue-hills/menu",
       title: "Menu",
     },
     {
-      id: `${basePath}/about`,
+      id: "/blue-hills/about",
       title: "About us",
     },
     {
-      id: `${basePath}/contact`,
+      id: "/blue-hills/contact",
       title: "Contact us",
+    },
+    {
+      id: "/blue-hills/gallery",
+      title: "Gallery",
     },
   ];
 

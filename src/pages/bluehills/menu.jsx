@@ -1,32 +1,32 @@
-import { menuItems } from "../../data/constants";
-import {
-  FaDrumstickBite,
-  FaPiggyBank,
-  FaUtensils,
-  FaIceCream,
-  FaFish,
-  FaGift,
-} from "react-icons/fa";
-import { GiChickenLeg, GiSteak } from "react-icons/gi";
+import { menuItems as bluehillsMenuItems } from "../../data/constants";
+import { menuItems1 as sowetoMenuItems } from "../../data/constants1";
 import Navbar from "../../components/Navbar";
 import styles from "../../style";
 import { useState, useEffect } from "react";
-import Card from "../../components/Card";
 
 const MenuPage = () => {
-  const iconMap = {
-    "Lamb Meat": <FaDrumstickBite className="w-6 h-6 text-gray-500" />,
-    "Pork Meat": <FaPiggyBank className="w-6 h-6 text-gray-500" />,
-    "Chicken Meat": <GiChickenLeg className="w-6 h-6 text-gray-500" />,
-    Extras: <FaUtensils className="w-6 h-6 text-gray-500" />,
-    "Sweet Things": <FaIceCream className="w-6 h-6 text-gray-500" />,
-    Fish: <FaFish className="w-6 h-6 text-gray-500" />,
-    "Beef Meat": <GiSteak className="w-6 h-6 text-gray-500" />,
-    "Specials & Platters": <FaGift className="w-6 h-6 text-gray-500" />,
-  };
-
   const [itemsToShow, setItemsToShow] = useState(3);
   const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedLocation, setSelectedLocation] = useState("Bluehills");
+
+  const categoryColors = {
+    "Lamb Meat": "bg-red-500",
+    "Pork Meat": "bg-pink-500",
+    "Chicken Meat": "bg-yellow-500",
+    "Extras": "bg-gray-500",
+    "Sweet Things": "bg-purple-500",
+    "Fish": "bg-blue-500",
+    "Beef Meat": "bg-gray-200", // Use a brownish color
+    "Specials & Platters": "bg-green-500",
+    "ubuntu Meals": "bg-gray-300", // Dark Red
+    "Grills": "bg-red-200", // Dark Green
+    "Appetizer": "bg-blue-500", // Pink
+    "Salads": "bg-rose-500", // Purple
+    "Dessert": "bg-rose-200", // Orange
+    "BreakFastMenu": "bg-yellow-200", // Light Blue
+    "Platters": "bg-yellow-300",
+  };
+  
 
   useEffect(() => {
     const handleResize = () => {
@@ -43,10 +43,13 @@ const MenuPage = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Choose the menu data based on the selected location
+  const menuData = selectedLocation === "Bluehills" ? bluehillsMenuItems : sowetoMenuItems;
+
   // Filtered menu items based on the selected category
   const filteredMenuItems = selectedCategory
-    ? menuItems.filter((section) => section.category === selectedCategory)
-    : menuItems;
+    ? menuData.filter((section) => section.category === selectedCategory)
+    : menuData;
 
   return (
     <div className="bg-primary w-full overflow-hidden">
@@ -59,88 +62,123 @@ const MenuPage = () => {
         <div className="container mx-auto px-4">
           <header className="text-center mb-12">
             <h1 className="text-5xl font-bold text-gray-900">Our Menu</h1>
-            <p className="text-gray-600 mt-4">
-              Explore our wide variety of delicious meals, crafted to perfection.
-            </p>
           </header>
 
-          {/* Mobile View Category Navigation */}
-          <div className="md:hidden mb-8">
+          {/* Location Toggle Buttons */}
+          <div className="flex justify-center mb-8">
             <button
-              className="w-full bg-gray-800 text-white py-2 px-4 rounded-lg text-left flex items-center justify-between"
-              onClick={() => setSelectedCategory(selectedCategory ? "" : menuItems[0].category)}
+              className={`px-6 py-3 mx-2 font-semibold rounded ${
+                selectedLocation === "Bluehills" ? "bg-primary text-white" : "bg-gray-200 text-gray-800"
+              }`}
+              onClick={() => setSelectedLocation("Bluehills")}
             >
-              {selectedCategory || "Select a Category"}
-              <svg
-                className="w-5 h-5 ml-2"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
+              Soweto
             </button>
-            {selectedCategory && (
-              <ul className="bg-white shadow-md rounded-lg mt-2">
-                {menuItems.map((section, index) => (
+            <button
+              className={`px-6 py-3 mx-2 font-semibold rounded ${
+                selectedLocation === "Soweto" ? "bg-primary text-white" : "bg-gray-200 text-gray-800"
+              }`}
+              onClick={() => setSelectedLocation("Soweto")}
+            >
+              Bluehills
+            </button>
+          </div>
+
+          {/* Menu Sections based on Location */}
+          <div>
+            {/* Mobile View Category Navigation */}
+            <div className="md:hidden mb-8">
+              <button
+                className="w-full bg-gray-800 text-white py-2 px-4 rounded-lg text-left flex items-center justify-between"
+                onClick={() => setSelectedCategory(selectedCategory ? "" : menuData[0].category)}
+              >
+                {selectedCategory || "Select a Category"}
+                <svg
+                  className="w-5 h-5 ml-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              {selectedCategory && (
+                <ul className="bg-white shadow-md rounded-lg mt-2">
+                  {menuData.map((section, index) => (
+                    <li key={index}>
+                      <a
+                        href={`#${section.category}`}
+                        onClick={() => {
+                          setSelectedCategory(section.category);
+                          setTimeout(() => setSelectedCategory(""), 300); // Close dropdown after selection
+                        }}
+                        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                      >
+                        <span className="ml-2">{section.category}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+
+            {/* Desktop View Category Navigation */}
+            <nav className="hidden md:block sticky top-0 z-10 bg-white shadow-md p-10 px-10 mb-8">
+              <ul className="flex justify-center items-center space-x-6">
+                {menuData.map((section, index) => (
                   <li key={index}>
                     <a
                       href={`#${section.category}`}
-                      onClick={() => {
-                        setSelectedCategory(section.category);
-                        setTimeout(() => setSelectedCategory(""), 300); // Close dropdown after selection
-                      }}
-                      className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                      className="text-lg font-semibold text-gray-900 hover:text-gray-200 transition"
                     >
-                      {iconMap[section.category]}{" "}
                       <span className="ml-2">{section.category}</span>
                     </a>
                   </li>
                 ))}
               </ul>
-            )}
-          </div>
+            </nav>
 
-          {/* Desktop View Category Navigation */}
-          <nav className="hidden md:block sticky top-0 z-10 bg-white shadow-md p-10 px-10 mb-8">
-            <ul className="flex justify-center items-center space-x-6">
-              {menuItems.map((section, index) => (
-                <li key={index}>
-                  <a
-                    href={`#${section.category}`}
-                    className="text-lg font-semibold text-gray-900 hover:text-gray-200 transition flex items-center"
-                  >
-                    {iconMap[section.category]} <span className="ml-2">{section.category}</span>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-
-          {/* Menu Sections */}
-          {filteredMenuItems.map((section, index) => (
-            <div key={index} id={section.category} className="mb-16">
-              <h2 className="text-3xl font-bold text-gray-800 mb-8 flex items-center">
-                {iconMap[section.category]}{" "}
-                <span className="ml-3">{section.category}</span>
-              </h2>
-              <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-6">
-                {section.items.slice(0, itemsToShow).map((item, idx) => (
-                  <Card
-                    key={idx}
-                    imageUrl={section.image}
-                    item={item}
-                  />
-                ))}
+            {/* Menu Sections */}
+            {filteredMenuItems.map((section, index) => (
+              <div key={index} id={section.category} className="mb-16">
+                <h2 className="text-3xl font-bold text-gray-800 mb-8">
+                  <span className="ml-3">{section.category}</span>
+                </h2>
+                <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-6">
+                  {section.items.map((item, idx) => (
+                    <div
+                      key={idx}
+                      className={`border border-gray-300 p-4 rounded-lg shadow-lg flex flex-col items-center text-center ${categoryColors[section.category] || 'bg-primary'}`}
+                    >
+                      <h3 className="text-xl font-semibold text-white">
+                        {item.name}
+                      </h3>
+                      {item.single !== undefined && item.meal !== undefined ? (
+                        <>
+                          <p className="text-white mt-2 mb-2">
+                            <span className="font-semibold">Single:</span> R{item.single}
+                          </p>
+                          <p className="text-white font-bold text-lg">
+                            <span className="font-semibold">Meal:</span> R{item.meal}
+                          </p>
+                        </>
+                      ) : (
+                        <p className="text-white font-bold text-lg">
+                          <span className="font-semibold">Price:</span> R{item.price}
+                        </p>
+                      )}
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
     </div>

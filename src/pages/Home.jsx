@@ -18,39 +18,39 @@ const Home = () => {
   }, []);
 
   return (
-    <div className={`h-screen ${isMobile ? 'flex flex-col' : 'grid grid-cols-2'}`}>
-      <div
-        className={`relative bg-cover bg-center flex-1 ${
-          isMobile ? 'bg-bg-mobile-image_1' : 'bg-bg-image_1'
-        }`}
-      >
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-          <h1 className="text-3xl md:text-4xl font-bold">𝒥𝓊𝓈𝓉 𝐵𝒶𝒹𝑒𝓁𝒶</h1>
-          <p className="mt-2 text-base md:text-lg text-center">
-            Bluehills, Midrand
-          </p>
-          <img src="/assets/logo.svg" alt="logo" />
-          <Link to="/blue-hills" className="mt-4 px-4 py-2 md:px-6 md:py-2 bg-black bg-opacity-50 hover:bg-opacity-75">
-            Welcome
-          </Link>
-        </div>
+    <div className="h-screen flex flex-col">
+      {/* Logo Section - 25% of the page height */}
+      <div className="bg-white flex justify-center items-center" style={{ height: '25%' }}>
+        <img src="/assets/logo.jpg" alt="Logo" className="w-full h-full object-contain" />
       </div>
 
+      {/* Full-width Image - 50% of the page height */}
       <div
-        className={`relative bg-cover bg-center flex-1 ${
-          isMobile ? 'bg-bg-mobile-image_2' : 'bg-bg-image_2'
-        }`}
+        className="bg-cover bg-center"
+        style={{
+          height: '50%', // Sets the image section to 50% of the page height
+          backgroundImage: "url('/assets/hero-img.jpg')",
+          backgroundSize: 'cover',  // Ensures the image covers the entire section
+          backgroundPosition: 'center',  // Centers the image in the section
+        }}
+      ></div>
+
+      {/* Welcome Button with Image - 25% of the page height */}
+      <div
+        className="relative flex justify-center items-center"
+        style={{
+          height: '25%', // Sets the button section to 25% of the page height
+         
+          backgroundSize: 'cover',  // Ensures the image covers the entire section
+          backgroundPosition: 'center',  // Centers the image in the section
+        }}
       >
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-          <h1 className="text-3xl md:text-4xl font-bold">𝒥𝓊𝓈𝓉 𝐵𝒶𝒹𝑒𝓁𝒶</h1>
-          <p className="mt-2 text-base md:text-lg text-center">
-            Soweto
-          </p>
-          <img src="/assets/logo.svg" alt="" />
-          <Link to='/soweto' className="mt-4 px-4 py-2 md:px-6 md:py-2 bg-black bg-opacity-50 hover:bg-opacity-75">
-            Welcome
-          </Link>
-        </div>
+        <Link
+          to="/blue-hills"
+          className="absolute text-white text-xl font-bold bg-black bg-opacity-50 px-6 py-3 hover:bg-opacity-75 rounded-lg" // Added 'rounded-lg' for rounded edges
+        >
+          Welcome
+        </Link>
       </div>
     </div>
   );

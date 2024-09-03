@@ -24,6 +24,16 @@ const BluehillsAbout = () => {
               surrounding areas and becoming a popular tourist destination in
               Gauteng.
             </p>
+            <h2 className="text-3xl font-semibold mb-6">Our Vision</h2>
+            <p className="text-lg leading-relaxed text-gray-600">
+              Just Badela is more than just a restaurant; it's a destination
+              where tradition meets modernity. Our new sit-down restaurant
+              concept combines a contemporary look and feel with open-plan
+              seating, allowing customers to observe the preparation of their
+              meals. We blend organic textures with bright lighting to create a
+              harmonious atmosphere.
+            </p>
+            
             <p className="text-lg leading-relaxed mt-4 text-gray-600">
               The concept was born from a gap between traditional Shisanyama
               setups and formal restaurants, leading to the creation of a hybrid
@@ -114,15 +124,7 @@ const BluehillsAbout = () => {
             <img src="/assets/ourmenu.jpg" alt="" />
           </div>
           <div className="mb-16">
-            <h2 className="text-3xl font-semibold mb-6">Our Vision</h2>
-            <p className="text-lg leading-relaxed text-gray-600">
-              Just Badela is more than just a restaurant; it's a destination
-              where tradition meets modernity. Our new sit-down restaurant
-              concept combines a contemporary look and feel with open-plan
-              seating, allowing customers to observe the preparation of their
-              meals. We blend organic textures with bright lighting to create a
-              harmonious atmosphere.
-            </p>
+            
             <p className="text-lg leading-relaxed mt-4 text-gray-600">
               Our express concept focuses on the convenience of great food
               prepared on-site and delivered, with limited seating for a quick
