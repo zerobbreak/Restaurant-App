@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar"; // Import the Navbar component
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -25,12 +26,12 @@ const Home = () => {
           <p className="text-lg text-gray-600 max-w-xl mx-auto">
             Explore a variety of delicious dishes made with the freshest ingredients.
           </p>
-          <a
-            href="/blue-hills/menu"
+          <Link
+            to="/blue-hills/menu"
             className="mt-6 inline-block bg-primary text-white font-semibold px-8 py-3 rounded-full shadow-md hover:bg-primary-dark transition duration-300"
           >
             View Menu
-          </a>
+          </Link>
         </div>
       </div>
 
