@@ -2,111 +2,144 @@ export const menuItems1 = [
 
 
     {
-        category: " ubuntu Meals",
+        category: "Lamb Meat",
+        image: "/assets/stew.jpg", // Add the image path here
         items: [
-            { name: "Served with your choice of 1 starch | 1 veg" },
-            { name: "Mogodu beef", price: 120 },
-            { name: "Mogodu Sheep", price: 125 },
-            { name: "Inyama Yenhloko ", price: 115 },
-            { name: "Skopo Half", price: 130 },
-            { name: "Skopo Full", price: 220 },
-            { name: "Amagqina Pork", price: 115 },
-            { name: "Amagqina Sheep", price: 115 },
-            { name: "Mleqwa (Hardbody chicken)half", price: 170 },
-            { name: "Mleqwa (Hardbody chicken)full", price: 280 },
-        ]
+            { name: "Amanqina", single: 95, meal: 135},
+            { name: "Full Skopo", single: 185, meal: 235 },
+            { name: "Half Skopo", single: 95, meal: 135 },
+            { name: "Lamb Cutlets", single: 180, meal: 220 },
+            { name: "Lamb Leg Chop", single: 195, meal: 210 },
+            { name: "Lamb Mogodu", single: 95, meal: 135 },
+            { name: "Lamb Shank", single: 190, meal: 225 }, // Adjusted price for consistency
+            { name: "Lamb Shoulder Chops", single: 175, meal: 215 },
+            { name: "Lamb Stew", single: 145, meal: 175 },
+        ],
     },
 
     // Pork Meat Choices
     {
-        category: "Grills",
+        category: "Pork Meat",
         image: "/assets/steambread.jpg", // Add the image path here
         items: [
-            { name: "Lamb cutlets (300g)", price: 270 },
-            { name: "Lamb shoulder (300g) ", price: 255 },
-            { name: "Lamb leg (300g)", price: 235 },
-            { name: "Ribe eye on the  bone (500g) ", price: 280 },
-            { name: "Shotribs (300g) ", price: 180 },
-            { name: "Brisket (300g) ", price: 130 },
-            { name: "Fillet steak (300g) ", price: 280 },
-            { name: "Boerewors (300g) ", price: 130 },
-            { name: "Smoked pork chop (400g) ", price:180  },
-            { name: "Pork ribs (350g) ", price:220  },
-            { name: "Pork ribs (700g) ", price: 390 },
-            { name: "Ox livers (300g) ", price:125  },
-            { name: "Ox Tongue (300g)  ", price:130  },
+            { name: "700g Pork Ribs", single: 290, meal: 365 },
+            { name: "Chorizo ", single: 90, meal: 120},
+            { name: "Eisbein", single: 150, meal: 185 },
+            { name: "Pork Belly", single: 150, meal: 185 },
+            { name: "Pork Chop", single: 95, meal: 135 },
+            { name: "Pork Neck", single: 105, meal: 145 },
+            { name: "Pork Trotters", single: 95, meal: 135 },
         ],
     },
 
+    // Chicken Meat Choices
+    {
+        category: "Chicken Meat",
+        image: "/assets/pap-chicken.jpg", // Add the image path here
+        items: [
+            { name: "Chicken Drumsticks", single: 80, meal: 135 },
+            { name: "Chicken Leg", single: 75, meal: 130 },
+            { name: "Chicken Wings", single: 80, meal: 135 },
+            { name: "Full Traditional Chicken", single: 250, meal: 320 },
+            { name: "Half Traditional Chicken", single: 160, meal: 215 },
+        ]
+    },
 
     // Extras
     {
         category: "Extras",
         image: "/assets/pap-meat.jpg", // Add the image path here
         items: [
-            { name: "Pap", price: 30 },
-            { name: "Dombolot", price: 30 },
-            { name: "Samp", price: 30 },
-            { name: "Spicy rice", price: 40 },
-            { name: "Mustard and dill baby potatoes", price: 40 },
-            { name: "Baked potato with garlic butter or sour cream and chives", price: 40 },
-            { name: "Just Badela’s hand cut fries", price: 40 },
+            { name: "Atchaar", price: 25 },
+            { name: "Butternut", price: 30 },
+            { name: "Cabbage", price: 25 },
             { name: "Chakalaka", price: 30 },
-            { name: "Veg of the day", price: 30 },
-            { name: "Morogo", price: 30 },
-            { name: "Side salad", price: 30 },
-            { name: "Butternut and veg atchar salad", price: 30 },
-            { name: "Just Badela chilli sauce", price: 45 },
-            { name: "Peri Peri Sauce", price: 45 },
-            { name: "Chimichurri (herb sauce with red wine vinegar and olive oil)", price: 45 },
-            { name: "Creamy mushroom and cognac sauce", price: 45 },
-            { name: "Creamy peppercorn sauce", price: 45 },
-            { name: "Red wine sauce ", price: 45 },
-            { name: "Lemon butter sauce", price: 45 },
-            { name: "Garlic butter sauce ", price: 45 },
-        ]
+            { name: "Coleslaw", price: 30 },
+            { name: "Dumpling", price: 25 },
+            { name: "Mash", price: 40 },
+            { name: "Pap", price: 25 },
+            { name: "Spicy Rice", price: 30 },
+            { name: "Salsa", price: 30 },
+            { name: "Spinach", price: 25 },
+            { name: "Baked Potato", price: 40 },
+            { name: "Brown Onion Sauce", price: 25 },
+            { name: "Butternut", price: 20 },
+            { name: "Chopped Chillie", price: 25},
+            { name: "Fried Chips", price: 40},
+            { name: "Full Garlic Bread", price: 85 },
+            { name: "Greek Salad", price: 60},
+            { name: "Chicken | Beef Salad", price: 75},
+            { name: "Jb Mini Chillie Sauce", price: 40},
+            { name: "Jb Big Chillie Sauce", price: 70},
+            { name: "Mushroom Sauce", price: 35 },
+            { name: "Steamed Veggies", price: 30},
+            { name: "Sweet Corn", price: 35},
+            { name: "Carrots", price: 25 },
+            { name: "Tomato & Onion Gravy", price: 30},
+        ],
     },
 
     // Sweet Things
     {
-        category: "Appetizer",
+        category: "Sweet Things",
+        image: "/assets/passionFruit.jpg", // Add the image path here
         items: [
-            { name: "Ox  livers ", price: 85 },
-            { name: "Ox  Tongue ", price: 85 },
-            { name: "Chicken wings ", price: 95 },
-            { name: "Just Badela platter ", price: 180 },
+            { name: "Honey", price: 10 },
+            { name: "Ice Cream", price: 40 },
+            { name: "Ice Cream & Fruits", price: 65 },
+            { name: "Malva Pudding n Custard", price: 65 }
         ]
     },
 
     // Fish
     {
-        category: "Salads",
+        category: "Fish",
+        image: "/assets/pexels-dana-tentis-118658-725991.jpg", // Add the image path here
         items: [
-            { name: "Greek salad", price: 160 },
-        ]
-    },
-
-
-    {
-        category: "Dessert",
-        items: [
-            { name: "Malva pudding", price: 80 },
+            { name: " Hake Meal", price: 160 },
+            { name: "Grilled Hake Meal", price: 160 },
         ]
     },
 
     // Beef Meat
     {
-        category: "BreakFastMenu",
+        category: "Beef Meat",
+        image: "/assets/meat-dish.jpg", // Add the image path here
         items: [
-            { name: "Just Badela Breakfast ", price: 125 },
+            { name: "500g Ribeye on the bone", single: 230 , meal: 280},
+            { name: "350g T-Bone Steak ", single:155 , meal: 190},
+            { name: "300g Ribeye Steak", single:180 ,meal:225},
+            { name: "300g Sirloin Steak ", single:190,meal: 230},
+            { name: "300g Beef Chuck ", single:95,meal:140},
+            { name: "300g Beef Liver ", single:95,meal:135},
+            { name: "Beef Mogodu ", single:95,meal:135},
+            { name: "300g Beef Shin  ", single:98,meal:140},
+            { name: "300g Beef Stew ", single:110,meal:145},
+            { name: "uGeme ", single:210,meal:235},
+            { name: "300g Boerewors ", single:95,meal:135},
+            { name: "300g Brisket ", single:98,meal:140},
+            { name: "Cheese Burger & Chips ", single:115,meal:140},
+            { name: "300g Fillet Steak  ", single:160,meal:205},
+            { name: "Inyama Yenhloko ", single:95,meal:130},
+            { name: "Ox Tail ", single:150,meal:185},
+            { name: "Ox Tongue ", single:98,meal:140},
+            { name: "300g Rump Steak ", single:180 ,meal:220 },
+            { name: "300g Short Ribs ", single:98,meal:140},
+            { name: "300g Sirloin Steak   ", single:150,meal:165},
         ]
     },
 
     // Specials & Platters
     {
-        category: " Platters",
+        category: "Specials & Platters",
         image: "/assets/Platter1.jpg", // Add the image path here
         items: [
+            { name: "Kiddies Burger n Chips", price: 85 },
+            { name: "Mixed Grill", price: 360 },
+            { name: "Cheese Board", price: 350 },
+            { name: "JB 2 Combo", price: 350 },
+            { name: "JB 4 Combo", price: 595 },
+            { name: "JB 6 Combo", price: 850 },
             { name: "Just 8 Platter", price: 1100 },
             { name: "Just 10 Platter", price: 1500 },
             { name: "Just 15 Platter", price: 2000 },

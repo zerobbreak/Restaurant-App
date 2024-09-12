@@ -55,12 +55,8 @@ const GalleryPage = () => {
 
   return (
     <div className="bg-white w-full overflow-hidden">
-      {/* Navbar Section */}
-      <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth}`}>
+      
           <Navbar logoImage="/assets/logo2.svg" />
-        </div>
-      </div>
 
       {/* Gallery Header */}
       <section className="px-6 py-16 bg-gray-50 text-gray-900">
@@ -131,7 +127,7 @@ const GalleryPage = () => {
         <section
           className="px-6 py-16 bg-gray-50 text-gray-900 relative flex items-center justify-center"
           style={{
-            backgroundImage: `url('/assets/background.jpg')`,
+            backgroundImage: `url('/assets/hero-img.jpg')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

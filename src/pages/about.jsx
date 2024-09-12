@@ -5,11 +5,7 @@ import styles from "../style";
 const BluehillsAbout = () => {
   return (
     <div className="bg-white w-full overflow-hidden">
-      <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth}`}>
-          <Navbar logoImage="/assets/logo.svg"/>
-        </div>
-      </div>
+          <Navbar logoImage="/assets/logo2.svg"/>
       <section className="px-6 py-16 bg-white text-gray-900">
         <div className="max-w-6xl mx-auto">
           <h1 className="text-5xl font-extrabold text-center text-gray-800 mb-12">
@@ -47,7 +43,7 @@ const BluehillsAbout = () => {
               with modern trends.
             </p>
 
-            {/* <img src="/assets/hatman.jpg" alt="Stock Image" /> */}
+            <img src="/assets/hatman.jpg" alt="Stock Image" />
           </div>
           <div className="mb-16">
             <h2 className="text-3xl font-semibold mb-6">Meet the Visionary</h2>
