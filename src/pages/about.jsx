@@ -1,13 +1,13 @@
-import Footer from "../../components/Footer";
-import Navbar from "../../components/Navbar";
-import styles from "../../style";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+import styles from "../style";
 
 const BluehillsAbout = () => {
   return (
-    <div className="bg-primary w-full overflow-hidden">
+    <div className="bg-white w-full overflow-hidden">
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
-          <Navbar />
+          <Navbar logoImage="/assets/logo.svg"/>
         </div>
       </div>
       <section className="px-6 py-16 bg-white text-gray-900">
@@ -47,7 +47,7 @@ const BluehillsAbout = () => {
               with modern trends.
             </p>
 
-            <img src="/assets/hatman.jpg" alt="Stock Image" />
+            {/* <img src="/assets/hatman.jpg" alt="Stock Image" /> */}
           </div>
           <div className="mb-16">
             <h2 className="text-3xl font-semibold mb-6">Meet the Visionary</h2>
@@ -64,7 +64,7 @@ const BluehillsAbout = () => {
               Orlando West, Dumile ensures that the restaurant remains true to
               its founding principles.
             </p>
-            <img src="/assets/visionary.jpg" alt="Owner" />
+            {/* <img src="/assets/visionary.jpg" alt="Owner" /> */}
           </div>
           <div className="mb-16">
             <h2 className="text-3xl font-semibold mb-6">Our Location</h2>
@@ -74,7 +74,7 @@ const BluehillsAbout = () => {
               families who appreciate delicious, healthy foods and beverages in
               a welcoming atmosphere.
             </p>
-            <img src="/assets/location.jpg" alt="" />
+            {/* <img src="/assets/location.jpg" alt="" /> */}
           </div>
           <div className="mb-16">
             <h2 className="text-3xl font-semibold mb-6">
@@ -121,7 +121,7 @@ const BluehillsAbout = () => {
               </li>
             </ul>
 
-            <img src="/assets/ourmenu.jpg" alt="" />
+            {/* <img src="/assets/ourmenu.jpg" alt="" /> */}
           </div>
           <div className="mb-16">
             

@@ -21,7 +21,7 @@ const Footer = () => {
   }
 
   return (
-    <footer className="py-8 shadow-lg">
+    <footer className="py-8 bg-primary shadow-lg">
       <div className="container mx-auto px-4 lg:px-0">
         <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start space-y-6 lg:space-y-0">
           {/* Contact Section */}

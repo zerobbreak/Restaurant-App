@@ -1,13 +1,13 @@
-import Footer from "../../components/Footer";
-import Navbar from "../../components/Navbar";
-import styles from "../../style";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+import styles from "../style";
 
 const BluehillsContact = () => {
   return (
-    <div className="bg-primary w-full overflow-hidden">
+    <div className="bg-white w-full overflow-hidden">
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
-          <Navbar />
+        <Navbar logoImage="/assets/logo2.svg"/>
         </div>
       </div>
 
