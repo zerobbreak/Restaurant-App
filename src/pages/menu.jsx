@@ -1,30 +1,25 @@
-import { menuItems as bluehillsMenuItems } from "../data/constants";
 import { menuItems1 as sowetoMenuItems } from "../data/constants1";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { useState } from "react";
 
 const MenuPage = () => {
-  const [selectedLocation, setSelectedLocation] = useState("Bluehills");
+  // Use Soweto's menu data directly
+  const menuData = sowetoMenuItems;
 
-  // Choose the menu data based on the selected location
-  const menuData =
-    selectedLocation === "Bluehills" ? bluehillsMenuItems : sowetoMenuItems;
-
-  // Define darker colors for each category
+  // Define the new color palette for each category
   const categoryColors = {
-    "Lamb Meat": "bg-green-900 border-green-800",
-    "Pork Meat": "bg-purple-900 border-purple-800",
-    "Chicken Meat": "bg-yellow-900 border-yellow-800",
-    "Extras": "bg-gray-800 border-gray-700",
-    "Sweet Things": "bg-pink-900 border-pink-800",
-    "Fish": "bg-blue-900 border-blue-800",
-    "Beef Meat": "bg-red-900 border-red-800",
-    "Specials & Platters": "bg-indigo-900 border-indigo-800",
+    "Lamb Meat": "bg-maroon-900 border-maroon-800", // Maroon
+    "Pork Meat": "bg-navy-900 border-navy-800", // Navy Blue
+    "Chicken Meat": "bg-charcoal-900 border-charcoal-800", // Charcoal
+    "Extras": "bg-mustard-900 border-mustard-800", // Mustard
+    "Sweet Things": "bg-green-900 border-green-800", // Green
+    "Fish": "bg-lightbrown-900 border-brown-800", // Light Brown
+    "Beef Meat": "bg-lightgrey-900 border-lightgrey-800", // Light Grey
+    "Specials & Platters": "bg-militarygreen-900 border-militarygreen-800", // Military Green
   };
 
   return (
-    <div className="bg-white w-full overflow-hidden">
+    <div className="bg-white  w-full overflow-hidden">
       <Navbar logoImage="/assets/logo2.svg" />
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -33,30 +28,6 @@ const MenuPage = () => {
               Our Menu
             </h1>
           </header>
-
-          {/* Location Toggle Buttons */}
-          <div className="flex justify-center mb-8">
-            <button
-              className={`px-6 py-3 mx-2 font-semibold rounded transition-colors duration-300 ${
-                selectedLocation === "Bluehills"
-                  ? "bg-gray-800 text-white"
-                  : "bg-gray-300 text-gray-800"
-              }`}
-              onClick={() => setSelectedLocation("Bluehills")}
-            >
-              Bluehills
-            </button>
-            <button
-              className={`px-6 py-3 mx-2 font-semibold rounded transition-colors duration-300 ${
-                selectedLocation === "Soweto"
-                  ? "bg-gray-800 text-white"
-                  : "bg-gray-300 text-gray-800"
-              }`}
-              onClick={() => setSelectedLocation("Soweto")}
-            >
-              Soweto
-            </button>
-          </div>
 
           {/* Menu Sections */}
           {menuData.map((section, index) => (

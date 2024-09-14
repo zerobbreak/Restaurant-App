@@ -13,6 +13,38 @@ export default {
       colors: {
         primary: "#1c1c36",
         secondary: '#f5f5f5',
+        maroon: {
+          900: '#800000',
+          800: '#990000',
+        },
+        navy: {
+          900: '#001f3f',
+          800: '#002b54',
+        },
+        charcoal: {
+          900: '#36454f',
+          800: '#4e5d63',
+        },
+        mustard: {
+          900: '#ffdb58',
+          800: '#e6c150',
+        },
+        green: {
+          900: '#006400',
+          800: '#008000',
+        },
+        lightbrown: {
+          900: '#a0522d',
+          800: '#8b4513',
+        },
+        lightgrey: {
+          900: '#d3d3d3',
+          800: '#c0c0c0',
+        },
+        militarygreen: {
+          900: '#4b5320',
+          800: '#6c7041',
+        },
       },
       backgroundImage: {
         'hero-img': "url('/assets/hero-img.jpg')",

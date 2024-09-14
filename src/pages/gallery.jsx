@@ -51,9 +51,7 @@ const GalleryPage = () => {
       {/* Gallery Header */}
       <section className="px-6 py-16 bg-gray-50 text-gray-900">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-6xl font-bold text-gray-900 mb-8">
-            Gallery
-          </h1>
+          <h1 className="text-6xl font-bold text-gray-900 mb-8">Gallery</h1>
           <p className="text-xl text-gray-500 mb-12">
             Explore our gallery featuring events and delicious food at Just Badela.
           </p>
@@ -61,9 +59,7 @@ const GalleryPage = () => {
             <button
               onClick={() => setShowEvents(true)}
               className={`px-8 py-3 font-semibold rounded-full transition-all duration-300 ease-in-out shadow ${
-                showEvents
-                  ? "bg-primary text-white hover:bg-primary-dark"
-                  : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                showEvents ? "bg-primary text-white hover:bg-primary-dark" : "bg-gray-200 text-gray-700 hover:bg-gray-300"
               }`}
             >
               Events
@@ -71,9 +67,7 @@ const GalleryPage = () => {
             <button
               onClick={() => setShowEvents(false)}
               className={`px-8 py-3 font-semibold rounded-full transition-all duration-300 ease-in-out shadow ${
-                !showEvents
-                  ? "bg-primary text-white hover:bg-primary-dark"
-                  : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                !showEvents ? "bg-primary text-white hover:bg-primary-dark" : "bg-gray-200 text-gray-700 hover:bg-gray-300"
               }`}
             >
               Food
@@ -82,61 +76,44 @@ const GalleryPage = () => {
         </div>
       </section>
 
-      {/* Events Section */}
+      {/* Events Section - Full Image Slideshow */}
       {showEvents && (
         <section
-          className="px-6 py-16 bg-white text-gray-900 relative flex items-center justify-center"
-          style={{
-            backgroundImage: `url(${eventImages[currentEventImageIndex]})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            transition: "background-image 0.5s ease-in-out",
-          }}
+          className="relative h-screen w-full bg-black text-white flex items-center justify-center"
         >
+          <div
+            className="absolute inset-0 bg-cover bg-center fade-animation"
+            style={{
+              backgroundImage: `url(${eventImages[currentEventImageIndex]})`,
+              transition: "opacity 1s ease-in-out",
+            }}
+          ></div>
           <div className="absolute inset-0 bg-black opacity-40"></div>
-          <div className="max-w-6xl mx-auto relative z-10 text-center">
-            <h2 className="text-5xl font-semibold text-white mb-8">
-              Events
-            </h2>
-            <div className="flex justify-center">
-              <img
-                src={eventImages[currentEventImageIndex]}
-                alt={`Event ${currentEventImageIndex + 1}`}
-                className="w-full max-w-lg h-[500px] object-cover rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105"
-              />
-            </div>
+          <div className="relative z-10 text-center">
+            <h2 className="text-5xl font-semibold mb-8">Events</h2>
           </div>
         </section>
       )}
 
-      {/* Food Section */}
+      {/* Food Section - Full Image Slideshow */}
       {!showEvents && (
         <section
-          className="px-6 py-16 bg-gray-100 text-gray-900 relative flex items-center justify-center"
-          style={{
-            backgroundImage: `url(${foodImages[currentFoodImageIndex]})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            transition: "background-image 0.5s ease-in-out",
-          }}
+          className="relative h-screen w-full bg-black text-white flex items-center justify-center"
         >
+          <div
+            className="absolute inset-0 bg-cover bg-center fade-animation"
+            style={{
+              backgroundImage: `url(${foodImages[currentFoodImageIndex]})`,
+              transition: "opacity 1s ease-in-out",
+            }}
+          ></div>
           <div className="absolute inset-0 bg-black opacity-40"></div>
-          <div className="max-w-6xl mx-auto relative z-10 text-center">
-            <h2 className="text-5xl font-semibold text-white mb-8">
-              Food
-            </h2>
-            <div className="flex justify-center">
-              <img
-                src={foodImages[currentFoodImageIndex]}
-                alt={`Food ${currentFoodImageIndex + 1}`}
-                className="w-full max-w-lg h-[500px] object-cover rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105"
-              />
-            </div>
+          <div className="relative z-10 text-center">
+            <h2 className="text-5xl font-semibold mb-8">Food</h2>
           </div>
         </section>
       )}
 
-      {/* Footer */}
       <Footer />
     </div>
   );

@@ -127,35 +127,6 @@ const BluehillsAbout = () => {
               sit-down meal.
             </p>
           </div>
-          <div>
-            <h2 className="text-3xl font-semibold mb-6">Contact Us</h2>
-            <p className="text-lg leading-relaxed text-gray-600">
-              For more information or inquiries, please contact us:
-            </p>
-            <ul className="mt-4 space-y-2 text-gray-700">
-              <li>
-                <strong>Phone:</strong> 063 111 8703
-              </li>
-              <li>
-                <strong>Email:</strong>{" "}
-                <a
-                  href="mailto:dumile@badela.co.za"
-                  className="text-blue-600 hover:underline"
-                >
-                  dumile@badela.co.za
-                </a>
-              </li>
-              <li>
-                <strong>Website:</strong>{" "}
-                <a
-                  href="http://www.justbadela.co.za"
-                  className="text-blue-600 hover:underline"
-                >
-                  www.justbadela.co.za
-                </a>
-              </li>
-            </ul>
-          </div>
         </div>
       </section>
 

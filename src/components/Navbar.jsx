@@ -6,10 +6,10 @@ const Navbar = ({ logoImage }) => {
 
   const navLinks = [
     { id: "/", title: "Home" },
-    { id: "/blue-hills/menu", title: "Menu" },
     { id: "/blue-hills/about", title: "About us" },
-    { id: "/blue-hills/contact", title: "Contact us" },
+    { id: "/blue-hills/menu", title: "Menu" },
     { id: "/blue-hills/gallery", title: "Gallery" },
+    { id: "/blue-hills/contact", title: "Contact us" },
   ];
 
   return (

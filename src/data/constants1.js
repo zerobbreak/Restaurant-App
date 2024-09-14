@@ -85,8 +85,7 @@ export const menuItems1 = [
         image: "/assets/passionFruit.jpg", // Add the image path here
         items: [
             { name: "Honey", price: 10 },
-            { name: "Ice Cream", price: 40 },
-            { name: "Ice Cream & Fruits", price: 65 },
+            { name: "Ice Cream & Fruit", price: 65 },
             { name: "Malva Pudding n Custard", price: 65 }
         ]
     },
@@ -96,7 +95,6 @@ export const menuItems1 = [
         category: "Fish",
         image: "/assets/pexels-dana-tentis-118658-725991.jpg", // Add the image path here
         items: [
-            { name: " Hake Meal", price: 160 },
             { name: "Grilled Hake Meal", price: 160 },
         ]
     },
