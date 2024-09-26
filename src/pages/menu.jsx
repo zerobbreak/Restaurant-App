@@ -11,9 +11,9 @@ const MenuPage = () => {
     "Lamb Meat": "bg-maroon-900 border-maroon-800", // Maroon
     "Pork Meat": "bg-navy-900 border-navy-800", // Navy Blue
     "Chicken Meat": "bg-charcoal-900 border-charcoal-800", // Charcoal
-    "Extras": "bg-mustard-900 border-mustard-800", // Mustard
+    Extras: "bg-mustard-900 border-mustard-800", // Mustard
     "Sweet Things": "bg-green-900 border-green-800", // Green
-    "Fish": "bg-lightbrown-900 border-brown-800", // Light Brown
+    Fish: "bg-lightbrown-900 border-brown-800", // Light Brown
     "Beef Meat": "bg-lightgrey-900 border-lightgrey-800", // Light Grey
     "Specials & Platters": "bg-militarygreen-900 border-militarygreen-800", // Military Green
   };
@@ -23,7 +23,9 @@ const MenuPage = () => {
       <Navbar logoImage="/assets/logo2.svg" />
 
       {/* Image Section in Header */}
-      <header className="relative h-screen"> {/* Full height for the header */}
+      <header className="relative h-screen">
+        {" "}
+        {/* Full height for the header */}
         <img
           src="/assets/menubackground.jpg"
           alt="Menu Background"
@@ -31,9 +33,7 @@ const MenuPage = () => {
         />
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10 flex items-center justify-center h-full">
-          <h1 className="text-6xl font-bold font-serif text-white">
-            Menu
-          </h1>
+          <h1 className="text-6xl font-bold font-serif text-white">uǝuɯǝW</h1>
         </div>
       </header>
 
