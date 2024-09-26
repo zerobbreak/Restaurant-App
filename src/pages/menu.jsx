@@ -29,11 +29,11 @@ const MenuPage = () => {
         <img
           src="/assets/menubackground.jpg"
           alt="Menu Background"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover rotate-180"
         />
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10 flex items-center justify-center h-full">
-          <h1 className="text-6xl font-bold font-serif text-white rotate-180">
+          <h1 className="text-6xl font-bold font-serif text-white">
             Menu
           </h1>
         </div>
