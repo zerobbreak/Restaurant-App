@@ -6,12 +6,12 @@ const Home = () => {
   return (
     <div className="relative min-h-screen">
       {/* Navbar at the top */}
-      <Navbar logoImage="/assets/logo2.svg" />
+      <Navbar logoImage="/assets/logo3.jpg" />
 
       {/* Full-width Hero Section */}
       <div className="relative w-full h-[calc(100vh-80px)]">
         <img
-          src="/assets/background.jpg"
+          src="/assets/background1.jpg"
           alt="Background"
           className="absolute inset-0 w-full h-full object-cover"
         />
