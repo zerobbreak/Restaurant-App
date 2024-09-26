@@ -8,9 +8,6 @@ const BluehillsAbout = () => {
           <Navbar logoImage="/assets/logo2.svg"/>
       <section className="px-6 py-16 bg-white text-gray-900">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-5xl font-extrabold text-center text-gray-800 mb-12">
-            About Just Badela
-          </h1>
           <div className="mb-16">
             <h2 className="text-3xl font-semibold mb-6">Our Story</h2>
             <p className="text-lg leading-relaxed text-gray-600">
@@ -20,6 +17,7 @@ const BluehillsAbout = () => {
               surrounding areas and becoming a popular tourist destination in
               Gauteng.
             </p>
+            <br />
             <h2 className="text-3xl font-semibold mb-6">Our Vision</h2>
             <p className="text-lg leading-relaxed text-gray-600">
               Just Badela is more than just a restaurant; it's a destination
@@ -43,7 +41,7 @@ const BluehillsAbout = () => {
               with modern trends.
             </p>
 
-            <img src="/assets/hatman.jpg" alt="Stock Image" />
+            
           </div>
           <div className="mb-16">
             <h2 className="text-3xl font-semibold mb-6">Meet the Visionary</h2>
@@ -126,6 +124,10 @@ const BluehillsAbout = () => {
               prepared on-site and delivered, with limited seating for a quick
               sit-down meal.
             </p>
+          </div>
+          <div className="mb-16">
+          <h2 className="text-3xl font-semibold mb-6">Services</h2>
+            <img src="/assets/about.jpg" alt="" />
           </div>
         </div>
       </section>

@@ -53,8 +53,8 @@ return (
               </span>
               <span className="flex items-center gap-5">
                 <FaEnvelope className="text-blue-600" />{" "}
-                <a href="mailto:info@badela.co.za" className="text-blue-600 hover:underline">
-                  info@badela.co.za
+                <a href="mailto:info@justbadela.co.za" className="text-blue-600 hover:underline">
+                info@justbadela.co.za
                 </a>
               </span>
             </p>

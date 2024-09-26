@@ -19,16 +19,26 @@ const MenuPage = () => {
   };
 
   return (
-    <div className="bg-white  w-full overflow-hidden">
+    <div className="bg-white w-full overflow-hidden">
       <Navbar logoImage="/assets/logo2.svg" />
+
+      {/* Image Section in Header */}
+      <header className="relative h-screen"> {/* Full height for the header */}
+        <img
+          src="/assets/menubackground.jpg"
+          alt="Menu Background"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="relative z-10 flex items-center justify-center h-full">
+          <h1 className="text-6xl font-bold font-serif text-white">
+            Menu
+          </h1>
+        </div>
+      </header>
+
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <header className="text-center mb-12">
-            <h1 className="text-5xl font-bold font-serif text-gray-900">
-              Our Menu
-            </h1>
-          </header>
-
           {/* Menu Sections */}
           {menuData.map((section, index) => (
             <div key={index} id={section.category} className="mb-16">
