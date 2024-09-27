@@ -20,6 +20,7 @@ const GalleryPage = () => {
     "/assets/events10.jpg",
     "/assets/events11.jpg",
     "/assets/events12.jpg",
+    "/assets/events13.jpg",
     "/assets/events14.jpg",
   ];
 
