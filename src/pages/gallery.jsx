@@ -84,42 +84,42 @@ const GalleryPage = () => {
 
       {/* Events Section - Full Image Slideshow */}
       {showEvents && (
-        <section
-          className="relative h-screen w-full bg-black text-white flex items-center justify-center"
-        >
+        <section className="relative h-[80vh] w-full bg-black text-white flex items-center justify-center rounded-lg overflow-hidden">
           <div
-            className="absolute inset-0 bg-cover bg-center fade-animation"
+            className="absolute inset-0 bg-cover bg-center fade-animation rounded-lg"
             style={{
               backgroundImage: `url(${eventImages[currentEventImageIndex]})`,
               transition: "opacity 1s ease-in-out",
+              backgroundSize: "contain", // Adjust the size to show full image
+              backgroundRepeat: "no-repeat", // Prevent background repeat
             }}
           ></div>
-          <div className="absolute inset-0 bg-black opacity-40"></div>
+          <div className="absolute inset-0 bg-black opacity-40 rounded-lg"></div>
           <div className="relative z-10 text-center">
-            <h2 className="text-5xl font-semibold mb-8">Events</h2>
+            
           </div>
         </section>
       )}
 
       {/* Food Section - Full Image Slideshow */}
       {!showEvents && (
-        <section
-          className="relative h-screen w-full bg-black text-white flex items-center justify-center"
-        >
+        <section className="relative h-[80vh] w-full bg-black text-white flex items-center justify-center rounded-lg overflow-hidden">
           <div
-            className="absolute inset-0 bg-cover bg-center fade-animation"
+            className="absolute inset-0 bg-cover bg-center fade-animation rounded-lg"
             style={{
               backgroundImage: `url(${foodImages[currentFoodImageIndex]})`,
               transition: "opacity 1s ease-in-out",
+              backgroundSize: "contain", // Adjust the size to show full image
+              backgroundRepeat: "no-repeat", // Prevent background repeat
             }}
           ></div>
-          <div className="absolute inset-0 bg-black opacity-40"></div>
+          <div className="absolute inset-0 bg-blac opacity-40 rounded-lg"></div>
           <div className="relative z-10 text-center">
-            <h2 className="text-5xl font-semibold mb-8">Food</h2>
+            
           </div>
         </section>
       )}
-
+<br />
       <Footer />
     </div>
   );
