@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -56,6 +56,13 @@ const Footer = () => {
                 aria-label="Instagram"
               >
                 <FaInstagram size={24} />
+              </a>
+              <a
+                href="https://www.tiktok.com/@justbadela_midrand?is_from_webapp=1&sender_device=pc"
+                className="text-white hover:text-blue-500 transition duration-200"
+                aria-label="Tiktok"
+              >
+                <FaTiktok size={24} />
               </a>
             </div>
           </div>
