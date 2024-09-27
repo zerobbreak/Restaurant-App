@@ -16,6 +16,11 @@ const GalleryPage = () => {
     "/assets/events6.jpg",
     "/assets/events7.jpg",
     "/assets/events8.jpg",
+    "/assets/events9.jpg",
+    "/assets/events10.jpg",
+    "/assets/events11.jpg",
+    "/assets/events12.jpg",
+    "/assets/events14.jpg",
   ];
 
   const foodImages = [
@@ -27,6 +32,7 @@ const GalleryPage = () => {
     "/assets/meat.jpg",
     "/assets/pap-chicken.jpg",
     "/assets/Platter1.jpg",
+    "/assets/foodyy.jpg",
   ];
 
   useEffect(() => {
